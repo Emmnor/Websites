@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greåker VGS</title>
+    <!-- importerer css fil -->
+    <link rel="stylesheet" href="../Stiler/stil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
+
+    <script>
+        // Her kaller vi til "oppstart" funksjonen med en gang siden har loadet ferdig
+        window.onload = oppstart;
+
+         function oppstart()
+         {
+            // Her legger vi på en "onclick" event på "rbBilde1 - 5"
+            // Man kan også skrive dette direkte i <input> taggene, feks: <input onclick="visBilde1" id="rbBilde1">
+             document.getElementById("rbBilde1").onclick=visBilde1;
+             document.getElementById("rbBilde2").onclick=visBilde2;
+             document.getElementById("rbBilde3").onclick=visBilde3;
+             document.getElementById("rbBilde4").onclick=visBilde4;
+             document.getElementById("rbBilde5").onclick=visBilde5;
+            
+            // Først setter vi src til "bilde" til "rbBilde1" sin value, dette er innholdet som står <input .. .. value="HER" />
+             document.getElementById("bilde").src = document.getElementById("rbBilde1").value;
+            // Så setter vi rbBilde1 checked som default, hver gang man reloader siden vil rbBilde1 være checked
+             document.getElementById("rbBilde1").checked = true;
+         }
+         
+         // Alle disse funksjonene endrer "bilde" sin src til <input .. .. value="VERDI">
+         // Så, hver gang man trykker på checkboxene vil src til "bilde" endre seg
+         function visBilde1()
+         {
+             document.getElementById("bilde").src = document.getElementById("rbBilde1").value;
+         }
+ 
+         function visBilde2()
+         {
+             document.getElementById("bilde").src = document.getElementById("rbBilde2").value;
+         }
+ 
+         function visBilde3()
+         {
+             document.getElementById("bilde").src = document.getElementById("rbBilde3").value;
+         } 
+ 
+         function visBilde4()
+         {
+             document.getElementById("bilde").src = document.getElementById("rbBilde4").value;
+         } 
+
+         function visBilde5()
+         {
+             document.getElementById("bilde").src = document.getElementById("rbBilde5").value;
+         } 
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <p>Greåker VGS</p>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Startside</a>
+                </li>
+                <li>
+                    <a href="../Sider/side1.html">Elevrådet</a>
+                </li>
+                <li>
+                    <a href="#">Greåker VGS</a>
+                </li>
+                <li>
+                    <a href="../Sider/side3.html">Nyheter</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <img src="#" id="bilde" />
+            <p><input type="radio" name="bildeliste" id="rbBilde1" value="../bilder/bilde1.jpg" /> Image 1 </p>
+            <p><input type="radio" name="bildeliste" id="rbBilde2" value="../bilder/bilde2.jpg" /> Image 2 </p>
+            <p><input type="radio" name="bildeliste" id="rbBilde3" value="../bilder/bilde3.jpg" /> Image 3 </p>
+            <p><input type="radio" name="bildeliste" id="rbBilde4" value="../bilder/bilde4.jpg" /> Image 4 </p>
+            <p><input type="radio" name="bildeliste" id="rbBilde5" value="../bilder/bilde5.jpg" /> Image 5 </p>
+
+            <h2>Om Greåker VGS</h2>
+            <p>Greåker videregående skole er en videregående skole i Greåker, Sarpsborg. Den ble reist i 1978 og utvidet på 1990-tallet.
+
+            <p>Skolen har rundt 900 elever og 170 ansatte.
+
+            <p>Greåker videregående skole er en knutepunkt skole - en skole tilrettelagt for blinde og svaksynte.
+
+            <p>Over 26000 entreprenørskapsaktiviteter er registrert hos elever og studenter i Østfoldskolen. Av dette består hele 1960 av aktivitetene i forrige skoleår alle elever og lærere på Greåker for. Sarpsborg kommune ligger på topp i aktivitet i kommunestatistikken og Greåker videregående skole er den skolen i landet med størst fokus på entreprenørskap. Dette er statistikken som Ungt Entreprenørskap kan skilte med i sitt arbeid.</p>
+
+            <h3>Skolen har utdanningsprogrammene:</h3>
+            <ol>
+                <li>Studiespesialisering</li>
+                <li>Studiespesialisering - Scienslinja (dette er studietilbudet for deg som liker naturfag og matematikk på ungdomsskolen og som vil litt ekstra med skolen. Vurderer du et yrke innen ingeniør, medisin, veterinær, forskning, miljøfag, teknologi, økonomi eller ledelse er dette studiet for deg.)</li>
+                <li>Helse og sosialfag</li>
+                <li>Musikk, dans og drama</li>
+                <li>Mygg- og anleggsteknikk</li>
+                <li>TAF</li>
+                <li>Påbyggingsår VG3</li>
+            </ol>
+        </main>
+        <aside>
+            Andre skoler i Viken
+            <p>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/borg-vgs/" target=_blank id="style">Borg VGS</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/stolav-vgs/" target=_blank id="style">st Olav VGS</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/glemmen-vgs/" target=_blank id="style">Glemmen VGS</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/frederikii-vgs/" target=_blank id="style">Fredrik 2. VGS</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/kalnes-vgs/" target=_blank id="style">Kalnes VGS</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/halden-vgs/" target=_blank id="style">Halden VGS</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/mysen-vgs/" target=_blank id="style">Mysen VGS</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://viken.no/askim-vgs/" target=_blank id="style">Askim VGS</a>
+                        </td>
+                    </tr>
+                </table>
+            </p>
+        </aside>
+        <footer>
+            Info hentet fra <a href="https://studievalg.no/skoler/videregaende/viken/sarpsborg/greaker-videregaende-skole" target="_blank" id="style">Studievalg.no</a>
+            <p>Bilder er tatt av John Doe, Greåker vgs </p>
+        </footer>
+    </div>
+</body>
+</html>

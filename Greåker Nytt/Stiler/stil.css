@@ -1,0 +1,219 @@
+body{
+    background-color: #ded6cc; /*gjelder på hele siden*/
+    font-family: 'Crimson Pro', serif;
+}
+
+h2{
+    font-size: 24pt;
+}
+
+/*her kommer wrapper (layout til siden)*/
+#wrapper{
+    display: flex; /*gjør den om til en flexbox*/
+    flex-direction: row; /*legger boksene vannrett ikke loddrett*/
+    flex-wrap: wrap; /*plasserer elementene vannrett og på ny linje under om bredden er full*/
+    border-color: #1abc24; /*grønn kantlinje*/
+    border-style: solid;
+    width: 900px;
+    margin: auto; /*sentreer innhold*/
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 10px 10px #808080; /*Lager droppshadow*/
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+
+/*trenger ikke en # pga det er en tag*/
+header{
+    border-style: solid; /*At linjen rundt er en hel linje, Ikke stripla eller nl.*/
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+    font-size: 60px;
+    padding: 2%; /*Luft inne i header*/
+}
+
+
+nav{
+    border-style: solid;
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+}
+
+
+/*når da denne er skalerbar så kan denne skaleres og ikke main, da vill denne ta opp mindre plass en 400px*/
+main{
+    border-style: solid;
+    flex-basis: 400px; /*bredde på boksen*/
+    flex-grow: 1; /*denne er nødvendig for at den skal være skalerbar, denne skalere opp*/
+    flex-shrink: 1; /*denne er nødvendig for at den skal være skalerbar, denne skalere ned*/
+    min-height: 200px; /*minste høyde*/
+    padding: 2%;
+}
+
+aside{
+    border-style: solid;
+    flex-basis: 150px; /*bredde på boksen*/
+    padding: 1%;
+}
+
+footer{
+    border-style: solid;
+    flex-basis: 100%; /*bredde på boksen*/
+    padding: 2%;
+}
+
+
+/*Menyoppsett*/
+ul{
+    list-style-type: none; /*Tar vekk det som kommer før i lista, punkter og eller tall*/
+    padding: 0;
+    width: 100%;
+    display: table;
+    text-align: center;
+    display: flex; /*Display flex og justify center for sentrering av items */
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    display: inline-block;
+    float: none;
+    margin: 5px;
+}
+
+ul a:link{
+    padding: 10px 30px;
+    color: #efece9;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #479f62;
+}
+
+ul a:visited{
+    text-decoration: none;
+    color:#efece9;
+    background-color: #479f62;
+}
+
+ul a:hover{
+    background-color: #efece9;
+    color: #000000;
+}
+
+
+
+/*Overskrift animasjon*/
+/*For at animasjonen skal kunne bli brukt på ulike nettsider*/
+.fade-in-text {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/*gallerioppsett*/
+#bilde{
+    display: block; /*Gjør den om til en blokk, slik at den står på raden alene*/
+    margin-left: auto; /*Senterrer bildet*/
+    margin-right: auto; /*Senterrer bildet*/
+    border: solid 10px #479f62;
+}
+
+
+/*eksterne linker tabell*/
+table{
+    background-color: #fff8f7;
+    box-shadow: 0px 0px 2px #808080;
+    display: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+table, th, td{
+    border: 1px solid #66c269;
+    padding: 5px;
+}
+
+td, th{
+    width: 100px;
+}
+
+/*Animasjon*/
+#container{
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    border: solid 10px #479f62;
+    display: flex;
+}
+
+#overlay{
+    position: absolute; /*fyller hele container*/
+    bottom: 100%; /*fyller helt ned*/
+    left: 0; /*finner origo*/
+    top: 0; /*finner origo*/
+    width: 100%; /*fyller helle bredden av bildet*/
+    overflow: hidden; /*starter usynlig*/
+    transition: 0.5s ease; /*0.5 sekunder overlay på fylle container*/
+    background-color: #808080;
+}
+
+/*fører musepeker over container og viser overlay*/
+#container:hover #overlay{
+    bottom: 0px; /*fyller helt til bunn av bildet*/
+    height: 100%;
+}
+
+#text{
+    color: #FFFFFF;
+    font-size: 44px;
+    text-align: center; /*sentreres på bildet, øverst*/
+    top: 50%; /*finner senter på bildet*/
+    left: 50%;  /*finner senter på bildet*/
+    position: absolute;
+    transform: translate(-50%, -50%); /*finner senter på tekststreng og legger den sentrert på objektet*/
+}
+
+
+/*Nyhetsartiklene*/
+#Nyhet{
+    display: block;
+    border-color: #479f62;
+    border-style: solid;
+    border-width: 5px;
+    padding: 5%;
+}
+
+#EgetBilde{
+    float: right; /*Plaserer bildet på høyre siden*/
+}
+
+#nbilde{
+    display: block;
+    width: auto;
+    height: auto;
+    float: right;
+    border: solid 5px #479f62;
+    margin: 10px;
+}
+
+#style:link{
+    text-decoration: none;
+    color: #000fff;
+}
+
+#style:visited{
+    text-decoration: none;
+    color: #000fff;
+}
+
+#style:hover{
+    text-decoration: none;
+    color: #ff0000;
+}

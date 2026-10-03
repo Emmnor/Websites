@@ -1,0 +1,86 @@
+body{
+  background-color: #0e2839;
+}
+
+/* https://techblog.geekyants.com/some-of-the-most-popular-css-text-animations#heading-typing-text */
+
+.wrapper.ten {
+  background-color: #0e2839;
+  margin-top: 4%;
+}
+.bounce {
+  font-size: 100px;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, #211e1e2e);
+}
+.bounce span {
+  display: inline-flex;
+  color: #c7f4ff;
+  font-family: "Play", sans-serif;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+      transform: translateY(0);
+  }
+  25% {
+      transform: translateY(-20px);
+  }
+}
+
+.ten span:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.ten span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.ten span:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.ten span:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.ten span:nth-of-type(5) {
+  animation-delay: 0.5s;
+}
+
+.ten span:nth-of-type(6) {
+  animation-delay: 0.6s;
+}
+
+.ten span:nth-of-type(7) {
+  animation-delay: 0.7s;
+}
+
+.ten span:nth-of-type(8) {
+  animation-delay: 0.8s;
+}
+
+
+
+#hovedside{
+  padding-top: 5%;
+  font-size: 50px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: inline-flex;
+  color: #87a5ad;
+  font-family: "Play", sans-serif;
+  text-decoration: none;
+}
+
+img{
+  width: 400px;
+  margin-top: 30px;
+}

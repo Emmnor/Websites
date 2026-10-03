@@ -1,0 +1,630 @@
+/********   Main Layout   ********/
+body{
+    font-family: 'Crimson Text', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*! Scroller */
+/* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+header{
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+    font-size: 60px;
+    text-align: left;
+    padding: 2%;
+    background-color: #fefefe;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+nav{
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+    background-color: #dadada;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-bottom:solid #8a8a8aa1 2px;
+}
+
+main{
+    flex-basis: 100%; /*bredde på boksen*/
+    min-height: 400px; /*minste høyde*/
+    background-color: #fefefe;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+}
+
+#logo{
+    width: 260px;
+    float: right;
+}
+
+/*! The sidebar menu */
+/* https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #0e2839; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+  
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #8a8a8a;
+    display: block;
+    transition: 0.3s;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #0e2839;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border: none;
+}
+  
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+    background-color: #444;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+
+/* Handlevogn / betalingslink */
+#handlevogn{
+    display: inline;
+    float: right;
+    height: 44px;
+}
+
+#tilbud{
+    display: inline;
+    margin-left: 5%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* Tilbudsmodal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 5px solid #0e2839;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/******** Innhold på Hjem siden  ********/
+#container{
+    display: flex;
+    justify-content: center;
+}
+
+#PC{
+    width: 400px;
+    padding: 2%;
+}
+
+#komplett{
+    text-align: center;
+}
+
+#tilpass{
+    text-align: center;
+}
+
+#linkTilPC{
+    padding: 2%;
+    background-color: #0e2839;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+#utskrift3{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+/******** Innhold i Kontakt oss siden ********/
+#kontakt{
+    font-size: 16px;
+}
+
+#bilde{
+    display: inline;
+    float: right;
+    width: 260px;
+    font-size: 16px;
+}
+
+#facebook{
+    width: 100px;
+}
+
+#cont1{
+    width: 50%;
+    float: left;
+    padding-bottom: 2%;
+    height: 200px;
+}
+
+#cont2{
+    width: 50%;
+    float: right;
+    padding-bottom: 2%;
+    height: 200px;
+}
+
+#lyd{
+    visibility: hidden;
+}
+
+/* https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 2%;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+/********  Innhold på Komplett siden  ********/
+/* Komplett PC Bilder/produkter */
+#produkter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Basicly betur at den er delt inn i 3 */
+    grid-template-rows: 1fr; /* Betyr at den skal være delt inn i 1 */
+}
+
+/* Produkt cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+  
+.price {
+    color: grey;
+    font-size: 22px;
+}
+  
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: #FFFFFF;
+    background-color: #3a6480;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+  
+.card button:hover {
+    opacity: 0.75;
+}
+
+/* Se mer tekst på design pc */
+#DesignPC{
+    color: #888;
+    text-decoration: underline;
+    display: inline;
+    cursor: pointer;
+}
+
+
+/*! PC modaler */
+
+/*? Design PC*/
+#Design{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(255,255,255,0.96); /* White w/ opacity */
+    color: #000;
+    grid-template-columns: 1fr 1fr; /* Basicly betur at den er delt inn i 3 */
+    grid-template-rows: 1fr; /* Betyr at den skal være delt inn i 1 */
+}
+
+#Design button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #3a6480;
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+    font-size: 18px;
+}
+  
+#Design button:hover {
+    opacity: 0.75;
+}
+
+/* Bilde av en iMac */
+#iMac{
+    width: 400px;
+    margin-right: 50px;
+    float: right;
+}
+
+.close2 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #0e0e0e;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close2:hover,
+.close2:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*? Gamer PC*/
+
+#Game{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(255,255,255,0.96); /* White w/ opacity */
+    color: #000;
+    grid-template-columns: 1fr 1fr; /* Basicly betur at den er delt inn i 3 */
+    grid-template-rows: 1fr; /* Betyr at den skal være delt inn i 1 */
+}
+    
+#Game button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #3a6480;
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+    font-size: 18px;
+}
+      
+#Game button:hover {
+    opacity: 0.75;
+}
+
+#AOC{
+    width: 450px;
+    margin-right: 50px;
+    float: right;
+    margin-top: 50px;
+}
+
+.close3 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #0e0e0e;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close3:hover,
+.close3:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*? Workstation PC*/
+
+#Work{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(255,255,255,0.96); /* white w/ opacity */
+    color: #000;
+    grid-template-columns: 1fr 1fr; /* Basicly betur at den er delt inn i 3 koloner */
+    grid-template-rows: 1fr; /* Betyr at den skal være delt inn i 1 rad */
+}
+
+
+#Work button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #3a6480;
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+    font-size: 18px;
+}
+      
+#Work button:hover {
+    opacity: 0.75;
+}
+
+#Samsung{
+    width: 500px;
+    float:right;
+    padding-right: 50px;
+}
+
+.close4 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #0e0e0e;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close4:hover,
+.close4:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/******** Tillpass egen PC ********/
+.collapsible {
+    background-color: #3a6480;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    display: inline-block;
+}
+  
+.active, .collapsible:hover {
+    background-color: #bcd2e1;
+    color: #000;
+}
+  
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+#leggTill{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #3a6480;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+    font-size: 18px;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+#leggTill:hover{
+    opacity: 0.75;
+}
+
+
+
+
+/***    Betalingssiden    ***/
+/*https://johnsardine.com/freebies/dl-html-css/simple-little-tab/*/
+table {
+	color:#EEE;
+	font-size:16px;
+	background:#eaebec;
+	margin:auto;
+	border:#ccc 1px solid;
+	border-radius:3px;
+	box-shadow: 0 1px 2px #d1d1d1;
+    width: 100%;
+}
+
+table th {
+	padding:21px 25px 22px 25px;
+	border-top:1px solid #fafafa;
+	border-bottom:1px solid #e0e0e0;
+	background: #0e2839;
+}
+
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+
+table td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #9bbcd2;
+	border-left: 1px solid #9bbcd2;
+    color: #0e2839;
+	background: #fafafa;
+}

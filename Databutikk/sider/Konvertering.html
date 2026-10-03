@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Konverteringsside</title>
+    <link rel="stylesheet" href="../stiler/stil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="myModal" class="modal"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" onclick="lukkModal();">&times;</span>
+          <h1>Dagens tilbud</h1>
+          <p>I dag er det 20% rabatt på alle komplette PC-er</p>
+        </div>
+    </div>
+
+    <header>GoData
+        <img src="../bilder/Logo.png" alt="GoData Logo" id="logo">
+    </header>
+
+    <nav>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../sider/hjem.html">Hjem</a>
+            <a href="../sider/Komplett.html">Komplett PC</a>
+            <a href="../sider/tilpass.html">Tilpass egen PC</a>
+            <a href="../sider/betaling.html">Betaling</a>
+            <a href="../sider/Utseende.html">Rediger Utseende</a>
+            <a href="#">Konvertering</a>
+            <a href="../sider/Kontakt.html">Kontaktside</a>
+      </div>
+      <button class="openbtn" onclick="openNav();">&#9776;</button>
+      <p id="tilbud" onclick="åpneTilbud();">
+        Dagens tilbud
+      </p>
+      <button class="openbtn" id="handlevogn" onclick="openBetaling();"> <i class="fa fa-shopping-cart"></i> </button>
+    </nav>
+
+    <main>
+        <h1>Konvertering</h1>
+        <br>
+        <input type="number" placeholder="Skriv inn binær" id="binær"> <button onclick="konverter();">Konverter</button>
+        <br>
+        <input type="number" placeholder="Skriv in desimal" id="desi"> <button onclick="konverter2();">Konverter</button>
+
+        <p id="utskrift1">Her kommer svaret</p>
+
+    </main>
+    
+    <script src="../script/script1.js"></script>
+</body>
+</html>

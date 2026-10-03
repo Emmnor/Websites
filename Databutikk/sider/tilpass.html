@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tillpass PC</title>
+    <link rel="stylesheet" href="../stiler/stil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="myModal" class="modal"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" onclick="lukkModal();">&times;</span>
+          <h1>Dagens tilbud</h1>
+          <p>I dag er det 20% rabatt på alle komplette PC-er</p>
+        </div>
+    </div>
+
+    <header>GoData
+        <img src="../bilder/Logo.png" alt="GoData Logo" id="logo">
+    </header>
+
+    <nav>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="./hjem.html">Hjem</a>
+            <a href="../sider/Komplett.html">Komplett PC</a>
+            <a href="#">Tilpass egen PC</a>
+            <a href="../sider/betaling.html">Betaling</a>
+            <a href="../sider/Utseende.html">Rediger Utseende</a>
+            <a href="../sider/Konvertering.html">Konvertering</a>
+            <a href="../sider/Kontakt.html">Kontaktside</a>
+      </div>
+      <button class="openbtn" onclick="openNav();">&#9776;</button>
+      <p id="tilbud" onclick="åpneTilbud();">
+        Dagens tilbud
+      </p>
+      <button class="openbtn" id="handlevogn"><i class="fa fa-shopping-cart" onclick="openBetaling();"></i></button>
+    </nav>
+
+    <main>
+        <H1>Tilpass egen PC</H1>
+                <!-- Må legge til ID og value for alle valgene -->
+        <div>
+            <div id="content">
+                <button class="collapsible">Hovedkort</button>
+            <div class="content">
+                <p>
+                    <p>Et hovedkort er et kretskort som kobler alle de sentrale komponentene sammen. Den gjør det slik at komponentene kan komunisere med hverandre. </p>
+                    Hentet fra <a href="https://snl.no/hovedkort" target="_blank">SNL</a>
+                    <hr>
+                    <p><input type="radio" name="Hovedkort" value="4309"> MSI MAG Z790 Tomahawk WiFi Hovedkort (best til Gaming) 4 309 kr med mva</p>
+                    <p><input type="radio" name="Hovedkort" value="1379"> ASRock B660M-HDV Hovedkort (best til Kontor) 1 379 kr med mva</p>
+                    <p><input type="radio" name="Hovedkort" value="2479"> ASUS PRIME H770-PLUS D4 Hovedkort (best til Design) 2 479 kr med mva</p>
+                </p>
+            </div>
+            
+            <button class="collapsible">Prosessor</button>
+            <div class="content">
+                <p>
+                    <p>CPU er den utførende delen av en datamaskin. Det vil si den delen som utfører oppgavene som ligger i arbeidslagret. I dagens CPU-er så finnes det flere kjerner som kan utføre flere oppgaver samtidig.</p>
+                    Hentet fra <a href="https://snl.no/CPU" target="_blank">SNL</a>
+                    <hr>
+                    <p><input type="radio" name="Prosessor" value="7482"> Intel Core i9-13900K Prosessor (best til Gaming) 7 482 kr med mva</p>
+                    <p><input type="radio" name="Prosessor" value="1679"> Intel Core i3 8100 Prosessor (best til Kontor) 1 679 kr med mva</p>
+                    <p><input type="radio" name="Prosessor" value="3895"> Intel Core i7-12700F (best til Design) 3 895 kr med mva</p>
+                </p>
+            </div>
+        
+            <button class="collapsible">RAM</button>
+            <div class="content">
+                <p>
+                    <p>RAM er en helelektronisk arbeidsminne som brukes til å middeltidig lagring internt i en datamaskin. Både kjørende programmeroperativsystemerg tilhørende data lagres i RAM.</p>
+                    Hentet fra <a href="https://snl.no/RAM_-_IT" target="_blank">SNL</a>
+                    <hr>
+                    <p><input type="radio" name="RAM" value="3905"> G.SKILL TRIDENT Z5 RGB DDR5-7200 CL34 (best til Gaming) 3 905 kr med mva</p>
+                    <p><input type="radio" name="RAM" value="659"> Corsair Vengeance LPX DDR4 2400MHz 16GB (best til Kontor) 659 kr med mva</p>
+                    <p><input type="radio" name="RAM" value="2729"> Corsair Vengeance RGB RT DDR4 4600MHz 32GB (best til Design) 2 729 kr med mva</p>
+                </p>
+            </div>
+
+            <button class="collapsible">Grafikkort</button>
+            <div class="content">
+                <p>
+                    <p>Grafikkortets oppgave er å konvertere grafikk fra en digital representasjon i arbeidsminnet til den aktuelle standarden for visning på skjerm. I tillegg har grafikkortet fysiske utganger der man tilkobler skjermkabelen.</p>
+                    Hentet fra <a href="https://snl.no/grafikkort" target="_blank">SNL</a>
+                    <hr>
+                    <p><input type="radio" name="Grafikk" value="21479"> PNY GeForce RTX 4090 Gaming VERTO EPIC-X RGB Triple Fan (best til Gaming) 21 479 kr med mva</p>
+                    <p><input type="radio" name="Grafikk" value="7995"> Nvidia Quadro RTX4000 (best til Kontor) 7 995 kr med mva</p>
+                    <p><input type="radio" name="Grafikk" value="16990"> ASUS TUF Gaming OC GeForce RTX 4080 (best til Design) 16 990 kr med mva</p>
+                </p>
+            </div>
+    
+            <button class="collapsible">Harddisk</button>
+            <div class="content">
+                <p>
+                    <p>
+                        Harddisk er en enhet for datalagring. En harddisk benytter én eller flere plater med et magnetiserbart belegg (magnetplater) der data lagres i form av magnetiske flekker.
+                        I dag har ulike former for flashminne, slik som SSD tatt over mange av bruksområdene til en harddisk. SSD er en elektronisk, flashminnebasert lagringsenhet som erstatter mekaniske harddisker (HDD) i datamaskiner.
+                        Siden minnet er elektronisk, går lesing og skriving av data mye raskere enn med en harddisk. En SSD bruker vesentlig mindre energi og lager mindre støy enn en mekanisk harddisk. Ettersom SSD-disker er elektroniske, er de generelt også mer driftssikre og varer lenger.
+                    </p>
+                    Hentet fra <a href="https://snl.no/harddisk" target="_blank">SNL/Harddisk</a> og  <a href="https://snl.no/SSD-disk" target="_blank">SNL/SSD</a>
+                    <hr>
+                    <p><input type="radio" name="Harddisk" value="1869"> Samsung 990 PRO NVMe M.2 SSD 1TB (best til Gaming) 1 869 kr med mva</p>
+                    <p><input type="radio" name="Harddisk" value="1547"> SABRENT Rocket 2230 512 GB (best til Kontor) 1 547 kr med mva</p>
+                    <p><input type="radio" name="Harddisk" value="3390"> Samsung 990 PRO NVMe M.2 SSD 2TB (best til Design) 3 390 kr med mva</p>
+                </p>
+            </div>
+    
+            <button class="collapsible">Strømforskyning</button>
+            <div class="content">
+                <p>Strømforsyningen er en viktig del av alle PCer da den leverer strøm til hele systemet. Strømforsyningen deles opp etter hvor mye strøm de leverer, gjerne fra 400 til 1200 watt. 
+                    Hvor mye du trenger avhenger av hvor kraftig eller hvor mange prosessorer og grafikkort du har, men 550W holder for de fleste. Videre klassifiseres de etter bronse, sølv, gull eller platinum, det sier noe om hvor effektiv strømforsyningen er. Jo edlere metall, jo mer effektiv er den, og den avgir blant annet mindre spillvarme og trekker mindre strøm.
+                </p>
+                Hentet fra <a href="https://www.komplett.no/category/10057/datautstyr/pc-komponenter/stroemforsyning" target="_blank">Komplett.no</a>
+                <hr>
+                <p>
+                    <p><input type="checkbox" value="1749" id="Strøm"> Cooler Master V750 SFX Gold 750W 1 749 kr med mva</p>
+                </p>
+            </div>
+    
+            <button class="collapsible">Nettverkskort</button>
+            <div class="content">
+                <p>
+                    Ditt nye nettverkskort eller adapter forenkler den trådløse nettilgangen hjemme. Nettverkskortet gjør det mulig for din PC å utveksle informasjon med andre datamaskiner over et lokalt eller tilkoblet nettverk. Velg mellom integrert nettverkskort eller en enklere USB-variant. 
+                    En USB-adapter gjør det mulig å koble til enheter som ikke er trådløse velegnet for streaming av TV, spillkonsoller eller andre enheter uten trådløs tilkobling.
+                </p>
+                Hentet fra <a href="https://www.komplett.no/category/10279/datautstyr/nettverk/nettverkskort" target="_blank">Komplett.no</a>
+                <hr>
+                <p>
+                    <p><input type="checkbox" value="789" id="Nettverk"> TP-Link Archer TX3000E 789 kr med mva</p>
+                </p>
+            </div>
+    
+            <button class="collapsible">Vifte</button>
+            <div class="content">
+                <p>
+                    Hold PC-en din gående med høy ytelse ved bruk av en effektiv vifte. For at din PC skal kunne jobbe effektivt, trenger den en vifte til kjøling av prosessoren og andre komponenter. Særlig høytytende prosessorer og grafikkort trenger effektiv nedkjøring av viften.
+                    Viftens oppgave er å kjøle prosessoren slik at den kan kjøre på full ytelse. Uten viften ville prosessoren raskt bli overopphetet. Selv om grafikkkortet ofte har egen vifte, trenger den også hjelp med å holde sirkulasjonen igang
+                </p>
+                Hentet fra <a href="https://www.power.no/c/1937/data-og-tilbehoer/datakomponenter/pc-vifter/" target="_blank">Power.no</a>
+                
+                <hr>
+                <p>
+                    <p><input type="checkbox" value="269" id="Vifte"> ASUS ROG Strix XF120 269 kr med mva</p>
+                </p>
+            </div>
+    
+            <button class="collapsible">Kabinett</button>
+            <div class="content">
+                <p>
+                    Et PC-kabinett er skallet som huser alle PC-en sine viktige komponenter, sånn som hovedkort, harddisk, grafikkort og så videre. Et godt kabinett sørger for at alle disse viktige komponentene holdes trygt på plass, og beskyttes fra støv, smuss, og lignende.
+                    Kabinettet bør også være bygget slik at du enkelt kan oppgradere komponentene, noe som er særlig viktig for gaming.
+                </p>
+                Hentet fra <a href="https://www.power.no/c/1931/data-og-tilbehoer/datakomponenter/kabinett/" target="_blank">Power.no</a>
+                <hr>
+                <p>
+                    <p><input type="checkbox" value="3928" id="Kabinett"> ASUS ROG Strix Helios Midi Tower (sort) 3 928 kr med mva</p>
+                </p>
+            </div>
+
+            <button class="collapsible">Skjerm</button>
+            <div class="content">
+                <p>
+                    En dataskjerm er en enhet som viser grafisk informasjon fra en datamaskin. Dataskjermen muliggjør en enkel dialog mellom programvare og bruker, og er en forutsetning for bruk av kontrollenheter slik som en mus.
+                    Det som vises på skjermen er avhengig av grafikkkortet.
+                </p>
+                Hentet fra <a href="https://snl.no/dataskjerm" target="_blank">SNL</a>
+                <hr>
+                <p>
+                    <p><input type="checkbox" value="4695" id="Skjerm"> Samsung 32" 4K skjerm S32A700 4 695 kr med mva</p>
+                </p>
+            </div>
+
+            <button class="collapsible">Mus</button>
+            <div class="content">
+                <p>
+                    Mus er en fysisk styreenhet for markøren (musepekeren) på en dataskjerm. I dag er musen standardutstyr til de fleste datamaskiner med et grafisk brukergrensesnitt. Selv om de aller fleste applikasjoner og systemer er mulig å betjene via tastatur, gjør musen mange av arbeidsoppgavene vesentlig enklere og mer effektive.
+                </p>
+                Hentet fra <a href="https://snl.no/mus_-_IT" target="_blank">SNL</a>
+                <hr>
+                <p>
+                    <p><input type="checkbox" value="647" id="Mus"> HyperX Pulsefire Haste Gaming Mus (sort) 647 kr med mva</p>
+                </p>
+            </div>
+
+            <button class="collapsible">Tastatur</button>
+            <div class="content">
+                <p>
+                    Tastatur er en enhet med taster for innmating av tegn og kommandoer på PCer, terminaler, telefoner, regnemaskiner, skrivemaskiner og lignende. Hver tast har flere koder knyttet til seg, avhengig av om de trykkes ned alene eller sammen med en spesialtast (på en PC for eksempel Alt, Shift og Ctrl).
+                </p>
+                Hentet fra <a href="https://snl.no/tastatur" target="_blank">SNL</a>
+                <hr>
+                <p>
+                    <p><input type="checkbox" value="1489" id="Tastatur"> HyperX Alloy Origins Core PBT Gaming Tastatur TKL (sort) 1 489 kr med mva</p>
+                </p>
+            </div>
+
+        </div>
+
+        <p><button id="leggTill" onclick="LeggTillIHandlekurv2();">Legg til i handlekurv</button></p>
+    
+
+    </main>
+    <script src="../script/script1.js"></script>
+</body>
+</html>

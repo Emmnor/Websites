@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestilling</title>
+    <link rel="stylesheet" href="../stiler/stil.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="../Bilder/SarpKomune.jpg" alt="Våpenskjold til Sarpsborg Komune" id="SK">
+            Bestilling
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../Sider/side1.html">Hjem</a>
+                </li>
+                <li>
+                    <a href="../Sider/bildegalleri.html">Bildegalleri</a>
+                </li>
+                <li>
+                    <a href="../Sider/linker.html">Linker</a>
+                </li>
+                <li>
+                    <a href="../Sider/kontakt.html">Kontakt oss</a>
+                </li>
+                <li>
+                    <a href="#">Bestilling</a>
+                </li>
+                <li>
+                    <a href="../Sider/historie.html">Historie</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div id="reg">
+                <h1>Bestill aktivitet her</h1>
+                Navn:<br />
+                <input type="text" id="txtName" placeholder="Skriv inn fornavn" />
+                Etternavn:<br />
+                <input type="text" id="txtEtternavn" placeholder="Skriv inn etternavn"/><br />
+                Epost:<br />
+                <input type="text" id="txtEmail" placeholder="Skriv inn epost adresse" /><br />
+                Aktivitet:<br />
+                <select id="selAktivitet"></select><br />
+                Bestill tid:<br />
+                <input type="date" id="datTid" /><br />
+                Ønsker du å svare på en spørreundersøkelse?: <input type="checkbox" id="chbNews" />
+                <button id="btnReg" onclick="reg();">Bestill</button>
+            </div>
+        </main>
+    <script src="../Script/bestilling.js"></script>
+</body>
+</html>

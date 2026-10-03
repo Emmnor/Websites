@@ -1,0 +1,63 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #999999;
+    background-image: url(../Bilder/sjø.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main{
+    background-image: url("../bilder/SarpKomune.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    width: 494px;
+    height: 630px;
+    border: 30px solid #FFFFFF;
+    padding: 5px;
+}
+
+/*roterende boks rundt link*/
+@keyframes tipsy{
+    0%{
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+}
+
+a{
+    color: #FFFFFF;
+    font-size: 80px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -3px; /*setter bokstavene tettere sammen*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+/*legger animasjon på linker, bruker before&after - elementet ikke skal legges i DOM, 
+må ha det med for å få boks til å fungere*/
+a:before, a:after{
+    content: ''; /*lar oss bruke innhold med before & after*/ 
+    padding: 90px 15px; /*luft rundt linken inn boks*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    display: block;
+    border: 10px solid;
+    border-color: #D9524A;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    box-shadow: 25px 25px 25px rgba(31,31,32, 0.8); /*skyggeeffekt på tekst*/
+    animation: 10s infinite alternate ease-in-out tipsy; /*same alle animasjonskall i en setning */
+}

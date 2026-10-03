@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildegalleri</title>
+    <link rel="stylesheet" href="../stiler/stil.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <!--Kan hende at bildestørrelse er feil men får ikke opp de 
+        bildene som skal være nede i lightboks som man skal kunne klikke på-->
+        <header> <img src="../Bilder/SarpKomune.jpg" alt="Våpenskjold til Sarpsborg Komune" id="SK">
+            Bildegalleri
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../Sider/side1.html">Hjem</a>
+                </li>
+                <li>
+                    <a href="#">Bildegalleri</a>
+                </li>
+                <li>
+                    <a href="../Sider/linker.html">Linker</a>
+                </li>
+                <li>
+                    <a href="../Sider/kontakt.html">Kontakt oss</a>
+                </li>
+                <li>
+                    <a href="../Sider/bestilling.html">Bestilling</a>
+                </li>
+                <li>
+                    <a href="../Sider/historie.html">Historie</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Bilder som skal brukes til å åpne lightbox-->
+            <div class="row">
+                <!--Thumbnails, viser bilde som blir klikket på og endrer musepeker-->
+                <div class="column">
+                    <img class="page" src="../Bilder/AmfiBorg.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img class="page" src="../Bilder/Inspiria.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img class="page" src="../Bilder/Politi.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img class="page" src="../Bilder/Quality.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img class="page" src="../Bilder/Rema.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img class="page" src="../bilder/Superland.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img class="page" src="../bilder/Greåker.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                </div>
+            </div>
+            <!-- Selve LB, med store bilder, nummerering, hover-light, bildetekst-->
+            <div id="myModal" class="modal">
+                <!--funskjonalitet for å stenge LB-->
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <!--innholdet i modalen-->
+                <div class="modal-content">
+                    <!--hvert individuelle bilde-->
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 7</div>
+                        <img src="../bilder/AmfiBorg.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 7</div>
+                        <img src="../bilder/Inspiria.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 7</div>
+                        <img src="../bilder/Politi.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 7</div>
+                        <img src="../bilder/Quality.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 7</div>
+                        <img src="../bilder/Rema.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 7</div>
+                        <img src="../bilder/Superland.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 7</div>
+                        <img src="../bilder/Greåker.jpg" style="width:100%">
+                    </div>
+
+                    <!-- navigasjon, blar fremover og bakover, lager "piler"-->
+                    <a class="prev" onclick="plussSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plussSlides(+1)">&#10095;</a>
+
+                    <!--bildetekst-->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!-- thumbnails i LB-->
+                    <!-- små bilder, under valgt stort bilde, viser bildet som er klikket på, lys på kun korrekt bilder samt korrekt bildetekst-->
+                    <div class="column">
+                        <img class="demo" src="../bilder/AmfiBorg.jpg" onclick="currentSlide(1)" alt="Bilde av Kjøpesentret Amfi Borg på vinterstid">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="../bilder/Inspiria.jpg" onclick="currentSlide(2)" alt="Bilde av Inspiria Science Center ved grålum">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="../bilder/Politi.jpg" onclick="currentSlide(3)" alt="Politistationen i Sarpsborg">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="../bilder/Quality.jpg" onclick="currentSlide(4)" alt="Bilde av Quality Hotell">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="../bilder/Rema.jpg" onclick="currentSlide(5)" alt="Bilde av Rema 1000 ved Grålum">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="../bilder/Superland.jpg" onclick="currentSlide(6)" alt="Bilde av superland som har basenger og Lekeland for små barn">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="../bilder/Greåker.jpg" onclick="currentSlide(7)" alt="Bilde av utestedet ved greåker VGS">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../script/bilder.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+body{
+    background-image: linear-gradient(rgba(1,159,209,1), rgba(1,159,209,0));
+}
+
+#wrapper{
+    display: flex; /*gjør den om til en flexbox*/
+    flex-direction: row; /*legger boksene vannrett ikke loddrett*/
+    flex-wrap: wrap; /*plasserer elementene vannrett og på ny linje under om bredden er full*/
+    /*border-color: #019fd1; /*grå kantlinje  #01addd  */
+    outline: ridge 8px #019fd1;
+    border-style: solid 1px #000000;
+    width: 1200px;
+    margin: auto; /*sentreer innhold*/
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 10px 10px #808080; /*Lager droppshadow*/
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+header{
+    border-style: solid; /*At linjen rundt er en hel linje, Ikke stripla eller nl.*/
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+    font-size: 60px;
+    padding: 2%; /*Luft inne i header*/
+    text-align: center;
+}
+
+nav{
+    border-style: solid;
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+    background-color: #efece9;
+}
+
+#SK{
+    width: 75px;
+    height: auto;
+    float: left;
+    margin-right: -75px;
+    border: solid 5px #FFFFFF;
+}
+
+main{
+    border-style: solid;
+    flex-basis: 400px; /*bredde på boksen*/
+    flex-grow: 1; /*denne er nødvendig for at den skal være skalerbar, denne skalere opp*/
+    flex-shrink: 1; /*denne er nødvendig for at den skal være skalerbar, denne skalere ned*/
+    min-height: 400px; /*minste høyde*/
+    padding: 2%;
+    background-color: #fefefe;
+}
+
+aside{
+    border-style: solid;
+    flex-basis: 300px; /*bredde pÃ¥ boksen*/
+    padding: 1%;
+}
+
+footer{
+    border-style: solid;
+    flex-basis: 100%; /*bredde pÃ¥ boksen*/
+    padding: 2%;
+}
+
+a:link{
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FF0000;
+    text-decoration: none;
+}
+
+#facebook{
+    width: 70px;
+    display: inline;
+    padding: 3%;
+}
+
+#instagram{
+    width: 70px;
+    display: inline;
+    padding: 2%;
+}
+
+#snapchat{
+    width: 90px;
+    display: inline;
+    padding: 1%;
+}
+
+#twitter{
+    width: 90px;
+    display: inline;
+    padding: 1%;
+}
+
+/*Menyoppsett*/
+ul{
+    list-style-type: none; /*Tar vekk det som kommer før i lista, punkter og eller tall*/
+    padding: 0;
+    width: 100%;
+    display: table;
+    text-align: center;
+    display: flex; /*Display flex og justify center for sentrering av items */
+    justify-content: center;
+}
+
+ul li{
+    display: inline-block;
+    float: none;
+    margin: 5px;
+    letter-spacing: 4px;
+    font-size: 18px;
+}
+
+ul a:link{
+    padding: 10px 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 25px 25px 25px 15px;
+    border: 2px solid #019fd1;
+    background-color:#FFFFFF;
+}
+
+ul a:visited{
+    text-decoration: none;
+    color:#019fd1;
+}
+
+ul a:hover{
+    color: #444444;
+    text-decoration: underline;
+    background-color: #EAEAEA;
+}
+
+/******************** BILDEGALLERI ***************************/
+/*brukes for å håndtere bilder på siden*/
+body{
+    margin: 0;
+}
+
+/*bilder på startsiden*/
+/*2 piksler mellom radene med små bilder*/
+.row > .column{
+    padding: 2px;
+    padding-top: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}  
+
+/*lager jevnstore kolonner, her regner vi 100 / antall bilder */
+.column{
+    float: left;
+    width: 13%;
+    border: inset;
+}
+
+/*startbilder, inni container*/
+img.page{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/*layout til modal (lightbox)*/
+.modal{
+    display: none; /*vises ikke ved oppstart*/
+    position: fixed;
+    z-index: 1; /*legger modal oppå siden*/
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*lager automatisk en scroller til siden #000000;*/
+    background: #000000; 
+}
+
+.modal-content{
+    position: relative; /*plasseres i forhold til egen størrelse*/
+    margin: auto;
+    background-color: #ffd600; /*skaper en strek over bildetekst*/
+    padding: 0;
+    width: 90%;
+    max-width: 1400px; /*tilpasses til hvert prosjekt*/
+}
+
+/*lukkeknapp - kan styles som tekst pga unicode */
+.close{
+    color: #FFFFFF;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: #999999;
+    text-decoration: none;
+    cursor: pointer; /*endrer musepeker*/
+}
+
+/*frem- og tilbakeknapper - kan styles som tekst pga unicode */
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none; /*kan ikke makeres av bruker*/
+    background-color: rgba(238, 238, 238, 50%);
+}
+
+.next{
+    right: 0; /*plasserer fremoverknappen til høyre*/
+}
+
+/*nummertekst 1/3 osv. */
+.numbertext{
+    color: #000000;
+    font-size: 12px;
+    padding: 8px, 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*plassering av bildetekst*/
+.caption-container{
+    text-align: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 2px 16px;
+}
+
+/*legger enkel effekt på thumbnailene inni modalen*/
+img.demo{
+    width: 100%;
+    opacity: 0.6; /*60% synlighet*/
+}
+
+.demo:hover{
+    opacity: 1; /*100% synlighet*/
+}
+
+
+/*********************** BESTILLING ******************/
+#reg{
+    max-width: 400px;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    padding: 15px;
+    background-color: #ffd600;
+    border-radius: 4px;
+    border: solid 5px #000000;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+select{
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+#btnReg{
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*********** Linker ***********/
+#link:link{
+    color: #0000FF;
+    text-decoration: none;
+}
+
+#link:visited{
+    color: #0000FF;
+    text-decoration: none;
+}
+
+#link:hover{
+    color: #FF0000;
+    text-decoration: none;
+}
+
+/*********** Linker til ulike nettsider ************/
+
+/*Det blir feil når jeg gir dem en id men når jeg bare bruker table og td så fungerer 
+det som det skal, Det skal ikke være en grå firkant inne i */
+
+#rad{
+    padding: 0.5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+
+#tabell{
+    width: 60%;
+    margin: auto;
+    background-color: #999999;
+}
+
+/*----------------- Kontaktinfotekst og text på hovedsiden -----------------*/
+#info{
+    font-size: 16px;
+    padding-left: 3%;
+}
+
+/********* Light dark mode **********/
+#ldMode{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#ldMode a:link{
+    text-decoration: none;
+    color: #0000FF;
+}
+
+#ldMode a:visited{
+    text-decoration: none;
+    color: #0000FF;
+}
+
+#ldMode a:hover{
+    text-decoration: none;
+    color: #FF0000;
+}
+
+
+/************* Quiz ***************/
+#refresh{
+    padding: 4px;
+}
+
+#quiztabell{
+    text-align: center;
+    font-size: 16px;
+    background-color: #808080;
+}
+
+#quizrute{
+    background-color: #EEEEEE;
+    padding: 5px;
+}
+
+#quizHeader{
+    background-color: #AEAEAE;
+    font-size: 25px;
+    text-decoration: underline;
+}

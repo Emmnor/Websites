@@ -1,0 +1,117 @@
+body{
+    background-image: linear-gradient(rgb(254,96,46), rgb(13,36,38));
+    color: #FFFFFF;
+}
+#wrapper{
+    display: flex; /*gjør den om til en flexbox*/
+    flex-direction: row; /*legger boksene vannrett ikke loddrett*/
+    flex-wrap: wrap; /*plasserer elementene vannrett og på ny linje under om bredden er full*/
+    /*border-color: #019fd1; /*grå kantlinje  #01addd  */
+    outline: ridge 8px #FE602E;
+    border-style: solid 1px #000000;
+    width: 1200px;
+    margin: auto; /*sentreer innhold*/
+    background-color: #101316;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+header{
+    border-style: solid; /*At linjen rundt er en hel linje, Ikke stripla eller nl.*/
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+    font-size: 60px;
+    padding: 2%; /*Luft inne i header*/
+    text-align: center;
+}
+
+nav{
+    border-style: solid;
+    flex-basis: 100%; /*fyller hele raden som er tilgjengelig*/
+    background-color: #101316;
+}
+
+#SK{
+    width: 75px;
+    height: auto;
+    float: left;
+    margin-right: -75px;
+    border: solid 5px #FFFFFF;
+}
+
+main{
+    border-style: solid;
+    flex-basis: 400px; /*bredde på boksen*/
+    flex-grow: 1; /*denne er nødvendig for at den skal være skalerbar, denne skalere opp*/
+    flex-shrink: 1; /*denne er nødvendig for at den skal være skalerbar, denne skalere ned*/
+    min-height: 400px; /*minste høyde*/
+    padding: 2%;
+    background-color: #010101;
+}
+
+/*Menyoppsett*/
+ul{
+    list-style-type: none; /*Tar vekk det som kommer før i lista, punkter og eller tall*/
+    padding: 0;
+    width: 100%;
+    display: table;
+    text-align: center;
+    display: flex; /*Display flex og justify center for sentrering av items */
+    justify-content: center;
+}
+
+ul li{
+    display: inline-block;
+    float: none;
+    margin: 5px;
+    letter-spacing: 4px;
+    font-size: 18px;
+}
+
+ul a:link{
+    padding: 10px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px 25px 25px 15px;
+    border: 2px solid #FE602E;
+    background-color:#000000;
+    text-decoration: underline;
+    
+}
+
+ul a:visited{
+    text-decoration: none;
+    color:#FE602E;
+}
+
+ul a:hover{
+    background-color: #101316;
+    color: #FFFFFF;
+}
+
+/*----------------------------------*/
+
+#info{
+    font-size: 16px;
+    padding-left: 3%;
+}
+
+/********* Light dark mode **********/
+#ldMode{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#ldMode a:link{
+    text-decoration: none;
+    color: #189AD3;
+}
+
+#ldMode a:visited{
+    text-decoration: none;
+    color: #189AD3;
+}
+
+#ldMode a:hover{
+    text-decoration: none;
+    color: #b4544b;
+}

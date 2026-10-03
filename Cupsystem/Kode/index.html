@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupsystem</title>
+</head>
+<body>
+    <p>Hvor mange spillere skal være med i cupen? </p>
+    <!--<input type="nmb" id="nmbSpillere"> <button id="btnStart" onclick="oppstart();">Start Cup</button>-->
+    <select id="selSpillere"> 
+        <!--Kan leggen til flere valg her hvis man ønsker. Må kunne faktoriseres.-->
+        <option value="64" > 64 spillere </option>
+        <option value="32"> 32 spillere </option>
+        <option value="16"> 16 spillere </option>
+        <option value="8"> 8 spillere </option>
+    </select>
+    <button id="start" onclick="oppstart();">Start Cup</button>
+    <button id ="restart" onclick="location.reload();">Ny runde</button>
+    
+    <hr>
+    <p id="utskrift1"></p>
+
+    <hr>
+    <p>Tidligere vinnere:</p>
+    <p id="highScore"></p>
+
+    <script src="./script/script1.js"></script>
+</body>
+</html>
